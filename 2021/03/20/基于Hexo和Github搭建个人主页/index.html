@@ -186,7 +186,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      822 字
+      862 字
     </span>
   
 
@@ -202,6 +202,14 @@
   
 
   
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
+    
   
 </div>
 
@@ -273,7 +281,7 @@
 <p><strong>Hello world！</strong></p>
 <h2 id="基于github部署博客">基于github部署博客</h2>
 <p>首先断开hexo服务，然后在github上部署个人博客。</p>
-<p>在github的个人主页创建一个新的仓库**（<a target="_blank" rel="noopener" href="http://xn--githubid-s39l6j4fnaa09o0k16eqwyphg8m4bdsnojmyo1aka5042bgh2cgam9917kpa7474hxpj.gihthub.io">需要注意的是作为个人主页的仓库名字主要是github的id加上.gihthub.io</a>）**</p>
+<p>在github的个人主页创建一个新的仓库<strong><a target="_blank" rel="noopener" href="http://xn--githubid-s39l6j4fnaa09o0k16eqwyphg8m4bdsnojmyo1aka5042bgh2cgam9917kpa7474hxpj.gihthub.io">需要注意的是作为个人主页的仓库名字主要是github的id加上.gihthub.io</a></strong></p>
 <p>在之前的<code>blog</code>文件下安装一个git部署的插件<code>hexo-deployer-git</code></p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">sh-3.2# npm install --save hexo-deployer-git<br></code></pre></td></tr></table></figure>
 <p>设置<code>_config.yml</code>文件中的内容</p>
@@ -285,11 +293,13 @@
 <p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gorcz4bhfsj311u04ewez.jpg" srcset="/img/loading.gif" lazyload alt=""></p>
 <p><code>branch</code>不指定默认也是master，这个问题不大。</p>
 <p>使用 <code>hexo d</code>部署到远端，注意需要输入一下自己的github用户名和密码。注意<code>repo</code>是自己的地址</p>
-<p>然后再github仓库中可以看到刚刚部署的博客。</p>
-<img src="/Users/zhujun/Desktop/Screen Shot 2021-03-20 at 3.47.54 PM.png" srcset="/img/loading.gif" lazyload style="zoom:50%;" />
-<p>在浏览器中直接访问仓库名，就可以看到部署好的博客了。</p>
+<p>然后在github仓库中可以看到刚刚部署的博客。（在浏览器中直接访问仓库名，就可以看到部署好的博客了）</p>
 <h2 id="更换主题">更换主题</h2>
-
+<p>在hexo中选择自己喜欢的主题，然后按照文档说明更换即可。</p>
+<h2 id="参考">参考</h2>
+<section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://letian.website/githubpageshexodajianjingtaiboke/">https://letian.website/githubpageshexodajianjingtaiboke/</a>
+<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Yb411a7ty?from=search&amp;seid=4723056125801616817">https://www.bilibili.com/video/BV1Yb411a7ty?from=search&amp;seid=4723056125801616817</a>
+<a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
             </div>
             <hr>
             <div>
@@ -483,6 +493,8 @@
   <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
 
 
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
 
 
