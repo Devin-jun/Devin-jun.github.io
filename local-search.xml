@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>关于归一化与标准化</title>
+    <link href="/2021/05/15/%E5%85%B3%E4%BA%8E%E5%BD%92%E4%B8%80%E5%8C%96%E5%92%8C%E6%A0%87%E5%87%86%E5%8C%96/"/>
+    <url>/2021/05/15/%E5%85%B3%E4%BA%8E%E5%BD%92%E4%B8%80%E5%8C%96%E5%92%8C%E6%A0%87%E5%87%86%E5%8C%96/</url>
+    
+    <content type="html"><![CDATA[<h1>关于归一化和标准化</h1><p>标准化和归一化是两种讨论的最多的缩放方法（<em><strong>scaling methods</strong></em>）。归一化（<em><strong>normalization</strong></em>）通常意味着把样本重新缩放到[0,1]的范围内。标准化（<em><strong>standardization</strong></em>）则通常表示将数据调整到平均值为0，标准差为1的操作。</p><p>在真实世界的数据中包含了各种不同的测量方法，在使用这些数据进行任意类型的分析前，需要对原始数据进行检查，例如在RNA测序数据中独立样本间的技术相差会很大，因此做样本比较时需要做一定的数据预处理，让所有的测量结果具有同样的尺度。此外在一些机器学习的算法中，如果不进行归一化，由于原始数据之间的取值范围差异过大，算法无法正常工作。</p><h2 id="归一化（Normalization）">归一化（Normalization）</h2><h3 id="Rescaling-min-max-normalization">Rescaling (min-max normalization)</h3><p>这是最简单的归一化方法，能够重新缩放特征范围到[0,1]</p><p>$$<br>x’=\frac{x-min(x)}{max(x)-min(x)}<br>$$<br>这种归一化方法并不会改变原本数据的分布<strong>形状</strong>（数据的分布通过这种<strong>线性缩放</strong>肯定是会改变的，但是数据<strong>分布的形状</strong>并不会改变）如下图所示</p><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gqk6ej5cfjj30lm0eotc9.jpg" alt="image-20210516125348175" style="zoom:50%;" /><p>该方法不适用于数据不稳定，存在极端值的情况。</p><h3 id="Mean-normalization">Mean normalization</h3><p>这种方法也是将原本的数据缩放到一个固定的范围。与rescaling的区别在于本方法映射的范围不再是[0,1]。<br>$$<br>x’=\frac{x-average(x)}{max(x)-min(x)}<br>$$</p><h2 id="标准化（Standardization）">标准化（Standardization）</h2><p>特征标准化使得数据中的每个特征均值为0，方差为1（单位方差），这种方法广泛运用于支持向量机，logistic回归和人工神经网络。<br>$$<br>x’=\frac{x-\mu}{\sigma}<br>$$</p><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gqk6zjye36j31020ps45w.jpg" alt="image-20210516131413031" style="zoom:50%;" /><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gqk700buasj30xu0pk7cd.jpg" alt="image-20210516131439200" style="zoom:50%;" /><p>在分类、聚类算法中，需要使用距离来度量相似性的时候、或者使用PCA技术进行降维的时候，该方法的表现较好。</p><h2 id="参考链接">参考链接</h2><ol><li><a href="https://en.wikipedia.org/wiki/Feature_scaling">https://en.wikipedia.org/wiki/Feature_scaling</a></li><li>标准化和归一化什么区别？ - 小松的回答 - 知乎 <a href="https://www.zhihu.com/question/20467170/answer/463834078">https://www.zhihu.com/question/20467170/answer/463834078</a></li><li><a href="https://blog.csdn.net/weixin_36604953/article/details/102652160">https://blog.csdn.net/weixin_36604953/article/details/102652160</a></li><li>标准化和归一化什么区别？ - thothsun的回答 - 知乎 <a href="https://www.zhihu.com/question/20467170/answer/839255695">https://www.zhihu.com/question/20467170/answer/839255695</a></li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>Bioinformatics</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Bioinformatics</tag>
+      
+      <tag>ML</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>从同济生信到清华CLS，凡是过往皆为序章</title>
     <link href="/2021/03/27/%E4%BB%8E%E5%90%8C%E6%B5%8E%E7%94%9F%E4%BF%A1%E5%88%B0%E6%B8%85%E5%8D%8ECLS%EF%BC%8C%E5%87%A1%E6%98%AF%E8%BF%87%E5%BE%80%E7%9A%86%E4%B8%BA%E5%BA%8F%E7%AB%A0/"/>
     <url>/2021/03/27/%E4%BB%8E%E5%90%8C%E6%B5%8E%E7%94%9F%E4%BF%A1%E5%88%B0%E6%B8%85%E5%8D%8ECLS%EF%BC%8C%E5%87%A1%E6%98%AF%E8%BF%87%E5%BE%80%E7%9A%86%E4%B8%BA%E5%BA%8F%E7%AB%A0/</url>
